@@ -22,7 +22,7 @@
     <meta name="keywords" content="<%- config.keywords %>" />
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        content="width=device-width, initial-scale=1.0"
     />
     <link rel="icon" href="<%- url_for(theme.avatar) %>" />
     <%- partial("import", { type }) %>
@@ -33,7 +33,7 @@
             <div id="loading" v-show="loading">
                 <div id="loading-circle">
                     <h2>LOADING</h2>
-                    <p>加载过慢请开启缓存 浏览器默认开启</p>
+                    <p>Vui long doi trong giay lat...</p>
                     <img src="<%- url_for(theme.loading) %>" />
                 </div>
             </div>
