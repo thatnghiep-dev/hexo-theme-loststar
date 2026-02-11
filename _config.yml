@@ -72,14 +72,14 @@ card:
     ...
   iconLinks:
   friendLinks:
-    dinhkarate: https://thatnghiep.dev
+    Mao: https://mao.thatnghiep.dev
 
 # Footer info
 footer:
-  since: 2025
+  since: 2026
   # Copyright info (falls back to site title/author if not set)
   copyright:
-    name: dinhkarate
+    name: thatnghiep.dev
     handle: dinhkarate
   # Customize the server domain name ICP
   ICP:
@@ -106,6 +106,10 @@ math:
 
 # Image preview
 preview:
+  enable: true
+
+# Starfield effect (twinkling stars + shooting stars)
+stars:
   enable: true
 
 # Article encryption

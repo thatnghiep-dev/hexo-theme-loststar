@@ -1,16 +1,13 @@
 <footer id="footer">
     <div id="footer-wrap">
         <div>
-            &copy;
-            <%= theme.footer.since %> - <%= date(Date.now(), "YYYY") %> <%= (theme.footer.copyright && theme.footer.copyright.name) || config.title %>
-            <span id="footer-icon">
-                <i class="fa-solid fa-font-awesome fa-fw"></i>
-            </span>
-            &commat;<%= (theme.footer.copyright && theme.footer.copyright.handle) || config.author %>
+            &copy; <%= date(Date.now(), "YYYY") %> Made by
+            <a href="https://github.com/dinhkarate">dinhkarate</a>
+            from <a href="https://thatnghiep.dev">thatnghiep.dev</a>
         </div>
         <div>
-            Based on the <a href="https://hexo.io">Hexo</a>
-            <a href="https://github.com/thatnghiep-dev/hexo-theme-loststar">LostStar</a> Theme
+            Based on the <a href="https://hexo.io">Hexo</a> |
+            <a href="https://github.com/thatnghiep-dev/hexo-theme-loststar">LostStar Theme</a>
         </div>
         <% if (theme.footer.ICP.enable) { %>
         <div>

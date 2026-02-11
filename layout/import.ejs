@@ -53,4 +53,7 @@
 <% if (type === "index") { %>
 <script src="<%- url_for("/js/lib/home.js") %>"></script>
 <% } %>
+<% if (theme.stars && theme.stars.enable) { %>
+<script src="<%- url_for("/js/lib/stars.js") %>"></script>
+<% } %>
 <link rel="stylesheet" href="<%- url_for("/css/main.css") %>" />
