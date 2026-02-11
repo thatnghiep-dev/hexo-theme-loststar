@@ -32,8 +32,8 @@
         <transition name="fade">
             <div id="loading" v-show="loading">
                 <div id="loading-circle">
-                    <h2>LOADING</h2>
-                    <p>Please wait a moment...</p>
+                    <h2><%- (theme.i18n && theme.i18n.loading_title) || 'LOADING' %></h2>
+                    <p><%- (theme.i18n && theme.i18n.loading_message) || 'Please wait a moment...' %></p>
                     <img src="<%- url_for(theme.loading) %>" />
                 </div>
             </div>
