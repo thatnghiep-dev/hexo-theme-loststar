@@ -23,14 +23,20 @@ colors:
 # Each mood maps tags to bg/text/chip colors
 # First matching mood wins; "default" is fallback
 moods:
-  default:
+  default: nhat-ky
   list:
-    # example:
-    #   tags:
-    #     - "Tag Name"
-    #   bg: "#ffffff"
-    #   text: "#000000"
-    #   chip: "#66afef"
+    nhat-ky:
+      tags:
+        - "Nhật ký"
+      bg: "#fff9e3"
+      text: "#382615"
+      chip: "#b694d0"
+    suy-nghi:
+      tags:
+        - "Suy nghĩ"
+      bg: "#f8fce1"
+      text: "#d6e499"
+      chip: "#f8fce1"
 
 # ParticleX theme icon is adopts the Font Awesome 6
 # https://fontawesome.com
