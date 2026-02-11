@@ -2,16 +2,15 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            <%= theme.footer.since %> - <%= date(Date.now(), "YYYY") %> <%= config.title %>
+            <%= theme.footer.since %> - <%= date(Date.now(), "YYYY") %> <%= (theme.footer.copyright && theme.footer.copyright.name) || config.title %>
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
-            &commat;<%= config.author %>
+            &commat;<%= (theme.footer.copyright && theme.footer.copyright.handle) || config.author %>
         </div>
         <div>
-            Based on the <a href="https://hexo.io">Hexo Engine</a> &amp;
-            <a href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
-            &bull; Modified as <a href="https://github.com/mao-thatnghiep-dev/hexo-theme-loststar">LostStar</a>
+            Based on the <a href="https://hexo.io">Hexo</a>
+            <a href="https://github.com/thatnghiep-dev/hexo-theme-loststar">LostStar</a> Theme
         </div>
         <% if (theme.footer.ICP.enable) { %>
         <div>

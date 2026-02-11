@@ -23,22 +23,14 @@ colors:
 # Each mood maps tags to bg/text/chip colors
 # First matching mood wins; "default" is fallback
 moods:
-  default: fairy-dream
+  default:
   list:
-    fairy-dream:
-      tags:
-        - "Fairy Dream"
-        - "Giấc mơ thần tiên"
-      bg: "#fff9e3"
-      text: "#382615"
-      chip: "#b694d0"
-    wandering-mind:
-      tags:
-        - "Wandering Mind"
-        - "Tâm trí lang thang"
-      bg: "#f8fce1"
-      text: "#d6e499"
-      chip: "#f8fce1"
+    # example:
+    #   tags:
+    #     - "Tag Name"
+    #   bg: "#ffffff"
+    #   text: "#000000"
+    #   chip: "#66afef"
 
 # ParticleX theme icon is adopts the Font Awesome 6
 # https://fontawesome.com
@@ -74,11 +66,15 @@ card:
     ...
   iconLinks:
   friendLinks:
-    Argvchs: https://argvchs.github.io
+    dinhkarate: https://thatnghiep.dev
 
 # Footer info
 footer:
-  since: 2022
+  since: 2025
+  # Copyright info (falls back to site title/author if not set)
+  copyright:
+    name: dinhkarate
+    handle: dinhkarate
   # Customize the server domain name ICP
   ICP:
     enable: false
@@ -130,6 +126,14 @@ giscus:
   inputPosition: bottom
   theme: preferred_color_scheme
   lang:
+
+# Internationalization (i18n)
+# Override any text displayed in the theme
+i18n:
+  read_more: Đọc thêm
+  loading_title: LOADING
+  loading_message: Vui lòng chờ một chút...
+  crypto_placeholder: Bài viết được mã hóa. Nhập mật khẩu.
 
 # Gitalk
 # https://github.com/gitalk/gitalk

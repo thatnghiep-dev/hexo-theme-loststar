@@ -35,11 +35,18 @@
                         <% post.tags.data.forEach((tag) => { %>
                         <span class="tag">
                             <%
-                                const colors = theme.colors.filter((color) => color !== prev);
-                                let id = Math.floor(Math.random() * colors.length);
-                                prev = colors[id];
+                                const tagMood = getMood([tag]);
+                                let tagColor;
+                                if (tagMood) {
+                                    tagColor = tagMood.chip;
+                                } else {
+                                    const colors = theme.colors.filter((color) => color !== prev);
+                                    let id = Math.floor(Math.random() * colors.length);
+                                    prev = colors[id];
+                                    tagColor = colors[id];
+                                }
                             %>
-                            <a href="<%- url_for(tag.path) %>" style="color: <%- colors[id] %>">
+                            <a href="<%- url_for(tag.path) %>" style="color: <%- tagColor %>">
                                 <%= tag.name %>
                             </a>
                         </span>
