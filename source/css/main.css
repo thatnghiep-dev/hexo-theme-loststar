@@ -59,6 +59,18 @@
   border-color: #34d058;
   color: #34d058;
 }
+
+/* ====== Stars Canvas ====== */
+#stars-canvas {
+  height: 100vh;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 0;
+}
+
 #footer {
   font-size: 14px;
   margin-top: 150px;
