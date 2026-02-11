@@ -1,5 +1,5 @@
 <%
-    const mood = getMood(page.tags.data);
+    const mood = page.tags && page.tags.data ? getMood(page.tags.data) : null;
     const moodStyle = mood
         ? `--mood-bg:${mood.bg};--mood-text:${mood.text};--mood-chip:${mood.chip}`
         : '';
