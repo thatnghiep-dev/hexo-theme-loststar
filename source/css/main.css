@@ -195,124 +195,46 @@
   text-align: center;
 }
 #home-head #home-info .loop:nth-child(1) {
-  animation: loop1 10s linear infinite;
+  animation: loop1 20s linear infinite;
   background: #fff;
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
-  -webkit-clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
+  mask-image: url("/images/star-chubby.svg");
+  -webkit-mask-image: url("/images/star-chubby.svg");
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
   opacity: 0.3;
-  transform: rotate(30deg);
+  transform: rotate(0deg) scale(1.5);
 }
 #home-head #home-info .loop:nth-child(2) {
-  animation: loop2 15s linear infinite;
+  animation: loop2 21s linear infinite;
   background: #fff;
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
-  -webkit-clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
+  mask-image: url("/images/star-chubby.svg");
+  -webkit-mask-image: url("/images/star-chubby.svg");
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
   opacity: 0.45;
-  transform: rotate(60deg);
+  transform: rotate(40deg) scale(1.5);
 }
 #home-head #home-info .loop:nth-child(3) {
-  animation: loop3 10s linear infinite;
+  animation: loop3 22s linear infinite;
   background: #fff;
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
-  -webkit-clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
+  mask-image: url("/images/star-chubby.svg");
+  -webkit-mask-image: url("/images/star-chubby.svg");
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
   opacity: 0.3;
-  transform: rotate(90deg);
-}
-#home-head #home-info .loop:nth-child(4) {
-  animation: loop4 15s linear infinite;
-  background: #fff;
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
-  -webkit-clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
-  opacity: 0.45;
-  transform: rotate(120deg);
+  transform: rotate(80deg) scale(1.5);
 }
 #home-head #home-info,
 #home-posts {
@@ -953,34 +875,34 @@ ol li {
 }
 @keyframes loop1 {
   from {
-    transform: rotate(30deg);
+    transform: rotate(30deg) scale(1.5);
   }
   to {
-    transform: rotate(390deg);
+    transform: rotate(390deg) scale(1.5);
   }
 }
 @keyframes loop2 {
   from {
-    transform: rotate(60deg);
+    transform: rotate(60deg) scale(1.5);
   }
   to {
-    transform: rotate(420deg);
+    transform: rotate(420deg) scale(1.5);
   }
 }
 @keyframes loop3 {
   from {
-    transform: rotate(90deg);
+    transform: rotate(90deg) scale(1.5);
   }
   to {
-    transform: rotate(450deg);
+    transform: rotate(450deg) scale(1.5);
   }
 }
 @keyframes loop4 {
   from {
-    transform: rotate(120deg);
+    transform: rotate(120deg) scale(1.5);
   }
   to {
-    transform: rotate(480deg);
+    transform: rotate(480deg) scale(1.5);
   }
 }
 @media (min-width: 900px) {
