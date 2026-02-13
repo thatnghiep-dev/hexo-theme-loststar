@@ -68,11 +68,10 @@ menu:
 card:
   enable: true
   description: |
-    Description
-    ...
+    Ánh sao lạc lối
   iconLinks:
   friendLinks:
-    Mao: https://mao.thatnghiep.dev
+    Lostar: https://lostar.thatnghiep.dev
 
 # Footer info
 footer:
