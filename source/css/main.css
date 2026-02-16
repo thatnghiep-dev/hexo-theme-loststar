@@ -1056,7 +1056,8 @@ ol li {
 }
 
 /* Discord custom emoji */
-.discord-emoji {
+.discord-emoji,
+.content img.discord-emoji {
   display: inline;
   height: 1.4em;
   width: auto;
