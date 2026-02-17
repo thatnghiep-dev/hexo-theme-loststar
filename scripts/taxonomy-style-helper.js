@@ -83,12 +83,13 @@ hexo.extend.helper.register("getTxStyle", function (post) {
 			"#4f6370",
 	};
 
-	// Effects: category effects → defaults effects
+	// Effects: tag override → category effects → defaults effects
 	const defEffects = defaults.effects || {};
 	const catEffects = catConfig.effects || {};
+	const tagEffects = (tagOverride && tagOverride.effects) || {};
 
-	const outline = mergeEffect(defEffects.outline, catEffects.outline);
-	const spark = mergeEffect(defEffects.spark, catEffects.spark);
+	const outline = mergeEffect(defEffects.outline, catEffects.outline, tagEffects.outline);
+	const spark = mergeEffect(defEffects.spark, catEffects.spark, tagEffects.spark);
 
 	return {
 		category: firstCat,
@@ -151,12 +152,14 @@ hexo.extend.helper.register("getTxTagStyle", function (tagName, categoryName) {
 });
 
 /**
- * Merge effect config: base defaults, then category overrides.
+ * Merge effect config: base defaults → category overrides → tag overrides.
  */
-function mergeEffect(base, override) {
+function mergeEffect(base, override, tagOverride) {
 	base = base || {};
 	override = override || {};
-	return {
+	tagOverride = tagOverride || {};
+	// Merge base + category first
+	const merged = {
 		enable:
 			override.enable !== undefined ? override.enable : base.enable || false,
 		color: override.color || base.color || "#00000033",
@@ -169,5 +172,16 @@ function mergeEffect(base, override) {
 					? base.opacity
 					: 0.35,
 		duration: override.duration || base.duration || "2.6s",
+	};
+	// Then apply tag override on top
+	return {
+		enable:
+			tagOverride.enable !== undefined ? tagOverride.enable : merged.enable,
+		color: tagOverride.color || merged.color,
+		width: tagOverride.width || merged.width,
+		blur: tagOverride.blur || merged.blur,
+		opacity:
+			tagOverride.opacity !== undefined ? tagOverride.opacity : merged.opacity,
+		duration: tagOverride.duration || merged.duration,
 	};
 }
