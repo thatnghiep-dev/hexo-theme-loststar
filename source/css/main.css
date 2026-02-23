@@ -345,8 +345,6 @@
   color: var(--tx-title-color, var(--tx-post-text, #66afef));
   text-align: center;
   text-shadow: var(--tx-title-glow, none);
-  font-size: 36px;
-  line-height: 1.28;
 }
 #home-posts .post a:has(.post-title),
 #home-posts .post > a:first-child {
@@ -527,8 +525,6 @@
 .article[data-category] > div > h1 {
   color: var(--tx-title-color, var(--tx-post-text));
   text-shadow: var(--tx-title-glow, none);
-  font-size: 36px;
-  line-height: 1.28;
 }
 /* Content headings (h1-h6 inside .content) */
 .article[data-category] .content h1,
