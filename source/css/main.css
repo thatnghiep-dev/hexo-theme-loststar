@@ -1065,13 +1065,16 @@ ol li {
 /* Discord custom emoji */
 .discord-emoji,
 .content img.discord-emoji {
-  display: inline-block;
-  width: 1.375em;
+  display: inline;
+  width: auto;
   height: 1.375em;
-  margin: 0 0.05em;
-  vertical-align: -0.22em;
-  object-fit: contain;
   max-width: none;
+  max-height: 1.375em;
+  margin: 0 0.05em;
+  vertical-align: -0.2em;
+  object-fit: contain;
+  border-radius: 0 !important;
+  overflow: visible;
 }
 .discord-emoji-animated {
   image-rendering: auto;
