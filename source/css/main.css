@@ -570,6 +570,31 @@ body::-webkit-scrollbar-track {
 .content {
   transition: opacity 0.25s;
 }
+
+/* Discord-like spoiler */
+.content .discord-spoiler {
+  background: #2b2d31;
+  border-radius: 4px;
+  color: transparent;
+  cursor: pointer;
+  display: inline;
+  padding: 0 0.2em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  user-select: none;
+}
+.content .discord-spoiler::selection {
+  background: #3f4147;
+  color: transparent;
+}
+.content .discord-spoiler:hover {
+  background: #3a3c42;
+}
+.content .discord-spoiler.revealed {
+  background: rgba(0, 0, 0, 0.12);
+  color: inherit;
+  user-select: text;
+}
+
 .content img,
 .content video,
 .content audio,

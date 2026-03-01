@@ -41,3 +41,28 @@ const app = Vue.createApp({
     },
 });
 app.mount("#layout");
+
+// Discord-like spoiler reveal behavior
+(function initDiscordSpoiler() {
+    function reveal(el) {
+        if (!el || el.classList.contains("revealed")) return;
+        el.classList.add("revealed");
+        el.setAttribute("aria-expanded", "true");
+    }
+
+    document.addEventListener("click", (e) => {
+        const t = e.target;
+        if (t && t.classList && t.classList.contains("discord-spoiler")) {
+            reveal(t);
+        }
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key !== "Enter" && e.key !== " ") return;
+        const t = e.target;
+        if (t && t.classList && t.classList.contains("discord-spoiler")) {
+            e.preventDefault();
+            reveal(t);
+        }
+    });
+})();
