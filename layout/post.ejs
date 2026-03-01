@@ -28,7 +28,7 @@
     const allVars = [txVars, ...fxVars].filter(Boolean).join(';');
     const catName = txStyle ? txStyle.category : null;
     const isDiaryPage = catName === 'Diary';
-    const displayTitle = isDiaryPage ? date(page.date, "DD/MM/YY") : page.title;
+    const displayTitle = isDiaryPage ? date(page.date, "DD/MM/YYYY") : page.title;
 %>
 <div class="article<%= fxClasses.length ? ' ' + fxClasses.join(' ') : '' %>" <% if (txStyle) { %>data-category="<%- catName %>" style="<%- allVars %>"<% } %>>
     <div>

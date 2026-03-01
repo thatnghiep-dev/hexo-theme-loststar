@@ -39,7 +39,7 @@
     const allVars = [txVars, ...fxVars].filter(Boolean).join(';');
     const catName = txStyle ? txStyle.category : null;
     const isDiaryPost = catName === 'Diary';
-    const displayTitle = isDiaryPost ? date(post.date, "DD/MM/YY") : post.title;
+    const displayTitle = isDiaryPost ? date(post.date, "DD/MM/YYYY") : post.title;
 %>
 <div class="post<%= fxClasses.length ? ' ' + fxClasses.join(' ') : '' %>" <% if (txStyle) { %>data-category="<%- catName %>" style="<%- allVars %>"<% } %>>
     <a href="<%- url_for(post.path) %>">
